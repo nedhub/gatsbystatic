@@ -5,7 +5,9 @@ import Header from "../components/Header";
 
 function contact() {
     return (
-        <div>
+        <div className="container">
+
+<div className="content">
             <Header/>
             <h1>Contact</h1>
 
@@ -13,10 +15,12 @@ function contact() {
             <p>
                 Call me maybe
             </p>
+            </div>
 
             <Footer/>
             
         </div>
+        
     )
 }
 

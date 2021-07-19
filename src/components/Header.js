@@ -1,28 +1,33 @@
 import React from 'react';
 import { Link } from "gatsby";
+import './header.scss';
+//import './header.module.scss';
+
+// import headerStyles from './header.module.scss';
+
 
 function Header() {
     return (
         <div>
 
-            <header>
-                <h1>nedhub</h1>
+            <header className="header">
+                <Link className="title" to ="/" activeClassName="active-nav-item">nedhub</Link>
 
-                <nav>
+                <nav className="nav">
 
-                    <ul>
+                    <ul className="navList">
 
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link className="navItem" to="/">Home</Link>
                         </li>
                         <li>
-                            <Link to="/blog">Blog</Link>
+                            <Link className="navItem" to="/blog" activeClassName="active-nav-item">Blog</Link>
                         </li>
                         <li>
-                            <Link to="/about">About</Link>
+                            <Link className="navItem" to="/about" activeClassName="active-nav-item">About</Link>
                         </li>
                         <li>
-                            <Link to="/contact">Contact</Link>
+                            <Link className="navItem" to="/contact" activeClassName="active-nav-item">Contact</Link>
                         </li>
                     </ul>
 
