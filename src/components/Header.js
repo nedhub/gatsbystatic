@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import './header.scss';
 //import './header.module.scss';
 
@@ -7,11 +7,31 @@ import './header.scss';
 
 
 function Header() {
+
+    const data = useStaticQuery(graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+            }
+        }
+    }
+    
+    
+    
+    `)
+
+    
+
+
+
+
+
     return (
         <div>
 
             <header className="header">
-                <Link className="title" to ="/" activeClassName="active-nav-item">nedhub</Link>
+                <Link className="title" to ="/" activeClassName="active-nav-item">{data.site.siteMetadata.title}</Link>
 
                 <nav className="nav">
 
@@ -31,7 +51,7 @@ function Header() {
                         </li>
                     </ul>
 
-
+ 
 
 
 

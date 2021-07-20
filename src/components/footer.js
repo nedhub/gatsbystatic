@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql, useStaticQuery,  } from "graphql";
 
 
 
@@ -6,12 +7,14 @@ import React from "react";
 
 const Footer = () => {
 
+    
+
     return (
 
         <footer>
 
 
-            <p>Created by nedhub, c 2021</p>
+            <p>Created by nedhub c 2021</p>
         </footer>
 
     )
